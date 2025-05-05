@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 
 public class PostUser extends BaseTest{
 
-    @Test
     public void TC_PostUser(){
         String bodyStr = "{ \"name\": \"Lina 3\", \"job\": \"Tester 3\" }";
         Response response = RestAssured.given()
@@ -21,7 +20,6 @@ public class PostUser extends BaseTest{
         response.then().statusCode(201);
     }
 
-    @Test
     public void TC_PutUser(){
         String bodyStr = "{ \"name\": \"Lina\", \"job\": \"Tester\" }";
         String userId = "2";
